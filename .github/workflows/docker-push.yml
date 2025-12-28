@@ -32,9 +32,6 @@ jobs:
           push: true # 启用推送
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/test:latest
-            # 提交哈希作为标签
-            # ${{ secrets.DOCKER_HUB_USERNAME }}/test:${{ github.sha }} 
-            # 标签/分支名作为标签
             ${{ secrets.DOCKER_HUB_USERNAME }}/test:${{ env.VERSION }} 
 
 
