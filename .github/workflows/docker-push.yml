@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./dockerfile # Dockerfile所在目录
-          file: Dockerfile # 指定Dockerfile路径
+          file: ./dockerfile/Dockerfile # 指定Dockerfile路径
           push: true # 启用推送
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/test:latest
